@@ -1,0 +1,104 @@
+{
+  "pages": [
+    {
+      "path": "pages/pc/login/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "友金农资库存与账单管理系统"
+      }
+    },
+    {
+      "path": "pages/pc/main/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "友金农资库存与账单管理系统"
+      }
+    },
+    {
+      "path": "pages/h5/login/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "友金农资库存与账单管理系统"
+      }
+    },
+    {
+      "path": "pages/h5/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "采购入库"
+      }
+    },
+    {
+      "path": "pages/h5/out/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "销售出库"
+      }
+    },
+    {
+      "path": "pages/h5/order/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "商品预定"
+      }
+    },
+    {
+      "path": "pages/h5/stock/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "库存管理"
+      }
+    },
+    {
+      "path": "pages/h5/mine/index",
+      "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "我的"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "友金农资库存与账单管理系统",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#f5f5f5"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#E53935",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/h5/index/index",
+        "text": "采购入库",
+        "iconPath": "static/icons/in.png",
+        "selectedIconPath": "static/icons/in-active.png"
+      },
+      {
+        "pagePath": "pages/h5/out/index",
+        "text": "销售出库",
+        "iconPath": "static/icons/out.png",
+        "selectedIconPath": "static/icons/out-active.png"
+      },
+      {
+        "pagePath": "pages/h5/order/index",
+        "text": "商品预定",
+        "iconPath": "static/icons/order.png",
+        "selectedIconPath": "static/icons/order-active.png"
+      },
+      {
+        "pagePath": "pages/h5/stock/index",
+        "text": "库存管理",
+        "iconPath": "static/icons/stock.png",
+        "selectedIconPath": "static/icons/stock-active.png"
+      },
+      {
+        "pagePath": "pages/h5/mine/index",
+        "text": "我的",
+        "iconPath": "static/icons/mine.png",
+        "selectedIconPath": "static/icons/mine-active.png"
+      }
+    ]
+  }
+}

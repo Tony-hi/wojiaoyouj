@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background-color: $bg-light;
+  color: $text-primary;
+  font-size: $font-size-base;
+}
+
+.container {
+  min-height: 100vh;
+  background-color: $bg-light;
+}
+
+.card {
+  background: $bg-color;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  
+  &-primary {
+    background-color: $primary-color;
+    color: #fff;
+    
+    &:hover {
+      background-color: $primary-dark;
+    }
+    
+    &:active {
+      transform: scale(0.98);
+    }
+  }
+  
+  &-secondary {
+    background-color: $bg-gray;
+    color: $text-primary;
+    
+    &:hover {
+      background-color: darken($bg-gray, 5%);
+    }
+  }
+  
+  &-danger {
+    background-color: $danger-color;
+    color: #fff;
+    
+    &:hover {
+      background-color: darken($danger-color, 10%);
+    }
+  }
+  
+  &-outline {
+    background-color: transparent;
+    border: 2rpx solid $primary-color;
+    color: $primary-color;
+    
+    &:hover {
+      background-color: $primary-light;
+    }
+  }
+  
+  &-sm {
+    padding: $spacing-xs $spacing-md;
+    font-size: $font-size-sm;
+  }
+  
+  &-lg {
+    padding: $spacing-md $spacing-xl;
+    font-size: $font-size-lg;
+  }
+  
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 2rpx solid $border-color;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 4rpx rgba($primary-color, 0.1);
+  }
+  
+  &::placeholder {
+    color: $text-hint;
+  }
+}
+
+.select {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 2rpx solid $border-color;
+  border-radius: $radius-md;
+  font-size: $font-size-base;
+  background-color: $bg-color;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:focus {
+    outline: none;
+    border-color: $primary-color;
+    box-shadow: 0 0 0 4rpx rgba($primary-color, 0.1);
+  }
+}
+
+.checkbox {
+  width: 40rpx;
+  height: 40rpx;
+  border: 2rpx solid $border-color;
+  border-radius: $radius-sm;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+  &:checked {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  
+  th, td {
+    padding: $spacing-sm $spacing-md;
+    text-align: left;
+    border-bottom: 2rpx solid $border-light;
+  }
+  
+  th {
+    background-color: $bg-light;
+    font-weight: 600;
+    color: $text-secondary;
+  }
+  
+  tr:hover {
+    background-color: $bg-light;
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease;
+}
+
+.modal-content {
+  background-color: $bg-color;
+  border-radius: $radius-xl;
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  animation: slideUp 0.3s ease;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-lg;
+  border-bottom: 2rpx solid $border-light;
+  
+  h3 {
+    font-size: $font-size-lg;
+    font-weight: 600;
+  }
+  
+  .close-btn {
+    width: 48rpx;
+    height: 48rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    
+    &:hover {
+      background-color: $bg-light;
+    }
+  }
+}
+
+.modal-body {
+  padding: $spacing-lg;
+}
+
+.modal-footer {
+  display: flex;
+  gap: $spacing-md;
+  padding: $spacing-lg;
+  border-top: 2rpx solid $border-light;
+  justify-content: flex-end;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5rpx); }
+  20%, 40%, 60%, 80% { transform: translateX(5rpx); }
+}
+
+.pulse {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+.text-primary { color: $primary-color; }
+.text-success { color: $success-color; }
+.text-warning { color: $warning-color; }
+.text-danger { color: $danger-color; }
+.text-info { color: $info-color; }
+.text-secondary { color: $text-secondary; }
+.text-hint { color: $text-hint; }
+
+.bg-primary { background-color: $primary-color; }
+.bg-success { background-color: $success-color; }
+.bg-warning { background-color: $warning-color; }
+.bg-danger { background-color: $danger-color; }
+.bg-light { background-color: $bg-light; }
+.bg-gray { background-color: $bg-gray; }
+
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-sm { gap: $spacing-sm; }
+.gap-md { gap: $spacing-md; }
+.gap-lg { gap: $spacing-lg; }
+
+.w-full { width: 100%; }
+.w-1\/2 { width: 50%; }
+.w-1\/3 { width: 33.333%; }
+.w-2\/3 { width: 66.666%; }
+
+.mt-sm { margin-top: $spacing-sm; }
+.mt-md { margin-top: $spacing-md; }
+.mt-lg { margin-top: $spacing-lg; }
+.mb-sm { margin-bottom: $spacing-sm; }
+.mb-md { margin-bottom: $spacing-md; }
+.mb-lg { margin-bottom: $spacing-lg; }
+
+.font-bold { font-weight: 600; }
+.font-normal { font-weight: 400; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }

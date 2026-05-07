@@ -1,0 +1,28 @@
+{
+  "name": "youjin-agricultural-system",
+  "version": "1.0.0",
+  "description": "友金农资库存与账单管理系统",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0",
+    "pinia": "^2.1.7",
+    "@supabase/supabase-js": "^2.43.4",
+    "echarts": "^5.5.0",
+    "axios": "^1.6.7",
+    "html5-qrcode": "^2.3.8"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "@types/node": "^20.12.7",
+    "sass": "^1.75.0",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10",
+    "vue-tsc": "^2.0.14"
+  }
+}
